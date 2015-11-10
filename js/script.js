@@ -7,9 +7,17 @@
 // 	and so on...
 
 $(document).ready(function() {
+
+var city =['NYC', 'SF', 'LA', 'ATX', 'SYD'];
+$.each(city,function(index,element){
+
+	$('#city-type').append($('<option></option>').html(element));
+  });
 });
 
-$('#submit-btn').click(changeCity);
+$('#city-type').click(changeCity);
+
+// $('#submit-btn').click(changeCity);
 
 function changeCity(){
 	var city = $('#city-type').val();
